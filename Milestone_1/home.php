@@ -45,25 +45,13 @@
                             <img src="<?php echo $value['poster'];?>" alt="">
                         </div>
                         <div class="content-details">
-                            <h3><?php echo $value['year'] ?></h3>
-                            <h3><?php echo $value['genre'] ?></h3>
+                            <span class="details-text"><?php echo $value['title']; ?></span>
+                            <span class="details-text"><?php echo $value['author']; ?></span>
+                            <span class="details-text"><?php echo $value['year']; ?></span>
+                            <span class="details-text"><?php echo $value['genre']; ?></span>
                         </div>
                       </div>
                   <?php } ?>
-                    <!-- <div class="card"> -->
-
-                        <!-- <div class="card-content">
-                            <div class="card-img">
-                                <img src="<?php echo $value['poster'];?>" alt="">
-                            </div>
-                            <div class="content-details">
-                                <span>prova</span>
-                            </div>
-                        </div> -->
-                    <!-- </div> -->
-                         
-
-
                 </div>
 
             </section>
