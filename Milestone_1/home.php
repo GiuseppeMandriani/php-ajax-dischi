@@ -1,6 +1,6 @@
 <?php //database
     require_once __DIR__ . '/database.php';
-    var_dump($database);
+    // var_dump($database);
 
 ?>
 
@@ -37,18 +37,31 @@
 
             <section class="container">
                 <div class="row">
-                    <div class="card">
 
-                        <!-- Card -->
-                        <div class="card-content">
+                  <!-- loop php  -->
+                  <?php foreach ($database as $value){?>
+                      <div class="card">
+                        <div class="card-img">
+                            <img src="<?php echo $value['poster'];?>" alt="">
+                        </div>
+                        <div class="content-details">
+                            <h3><?php echo $value['year'] ?></h3>
+                            <h3><?php echo $value['genre'] ?></h3>
+                        </div>
+                      </div>
+                  <?php } ?>
+                    <!-- <div class="card"> -->
+
+                        <!-- <div class="card-content">
                             <div class="card-img">
-                                <img src="" alt="">
+                                <img src="<?php echo $value['poster'];?>" alt="">
                             </div>
                             <div class="content-details">
+                                <span>prova</span>
                             </div>
-                        </div>
-
-                    </div>
+                        </div> -->
+                    <!-- </div> -->
+                         
 
 
                 </div>
