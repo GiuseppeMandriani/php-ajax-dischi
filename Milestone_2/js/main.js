@@ -11,7 +11,13 @@ const app = new Vue({
     created() {
         // Get Data
 
-        const dataURL = 'http://localhost/php-ajax-dischi/Milestone_2/scripts/get_info.php';
+        console.log(window.location.href);
+
+        // http://localhost/php-ajax-dischi/Milestone_2/home2.html
+
+        // Se cambio con href non funziona
+
+        const dataURL = window.location.href + 'scripts/get_info.php';
 
         axios.get(dataURL)
             .then((res) => {
