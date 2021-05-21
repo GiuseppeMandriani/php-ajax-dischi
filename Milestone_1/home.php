@@ -39,7 +39,7 @@
                   <?php foreach ($database as $value){?>
                       <div class="card">
                         <div class="card-img">
-                            <img src="<?php echo $value['poster'];?>" alt="">
+                            <img src="<?php echo $value['poster'];?>" alt="<?php echo$value['title']; ?>">
                         </div>
                         <div class="content-details">
                             <span class="details-text"><?php echo $value['title']; ?></span>

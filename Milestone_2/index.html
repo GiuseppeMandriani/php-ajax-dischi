@@ -19,9 +19,21 @@
 
         <header class="container">
             <!-- Logo -->
-            <div class="logo">
-                <img src="../Milestone_1/img/logo.png" alt="logoSpotify">
-                <h2>Dischi del Mese</h>
+            <div class="header">
+                <div class="logo">
+                    <img src="../Milestone_1/img/logo.png" alt="logoSpotify">
+                    <h2>Dischi del Mese</h>
+                </div>
+                <div class="search">
+                    <div class="wrap-select">
+                        <select name="type" id="type">
+                            <option value="All">All</option>
+                            <option value="All" v-for="(author,index) in albums" :key="index">{{ author.author }}
+                            </option>
+                            </option>
+                        </select>
+                    </div>
+                </div>
             </div>
         </header>
 

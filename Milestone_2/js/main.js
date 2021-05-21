@@ -6,6 +6,7 @@ const app = new Vue({
     el: '#app',
     data: {
         albums: [],
+
     },
 
     created() {
@@ -13,7 +14,7 @@ const app = new Vue({
 
         console.log(window.location.href);
 
-        // http://localhost/php-ajax-dischi/Milestone_2/home2.html
+        // http://localhost/php-ajax-dischi/Milestone_2/scripts/get_info.php
 
         // Se cambio con href non funziona
 
