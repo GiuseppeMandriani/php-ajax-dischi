@@ -26,11 +26,10 @@
                 </div>
                 <div class="search">
                     <div class="wrap-select">
-                        <select name="type" id="type">
-                            <option value="All">All</option>
-                            <option value="All" v-for="(author,index) in albums" :key="index">{{ author.author }}
-                            </option>
-                            </option>
+
+                        <select @change="getFiltered" v-model="filterArtist">
+                            <option value="all">All</option>
+                            <option v-for="artist in artists" :value="artist">{{ artist }}</option>
                         </select>
                     </div>
                 </div>

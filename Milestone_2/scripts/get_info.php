@@ -50,34 +50,44 @@
 
 
 
-
-$authors = [];
-
-$query = (!empty($_GET)) ? $_GET['author'] : 'All';
+// Cerco se ho dato per filtrare
 
 
-if($query !== 'All'){
-   foreach($database as $artist){
-      if(strpos($artist['author'], $query) !== false){
-         $authors[] = $artist['author'];
+$artist = empty($_GET['artist']) ? false : $_GET['artist'];    
+
+// Get albums
+
+$albums = [];
+
+if($artist == false || $artist =='all'){
+   $albums = $database;
+} else {
+   foreach($database as $album){
+      if($album['author'] == $artist){
+         $albums[] = $album;
       }
    }
-} else{
-   $authors = $database;
 }
-    
 
+// Get Artist
 
+$artists = [];
+foreach($database as $album){
+   if(!in_array($album['author'], $artists)){
+      $artists[] = $album['author'];
+   }
+}
 
+// Final Result
 
-
-
-
-
+$results = [
+   'albums' => $albums,
+   'artists' => $artists
+];
 
 
    header('Content-Type: application/json');
-   echo json_encode($authors);
+   echo json_encode($results);
 
 ?>
 
